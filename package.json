@@ -16,7 +16,8 @@
   "homepage": "https://github.com/backusllc/ageo-function#readme",
   "dependencies": {
     "@netlify/functions": "^2.4.0",
-    "netlify-lambda": "^2.0.16"
+    "netlify-lambda": "^2.0.16",
+    "nodemailer": "^6.9.7"
   },
   "devDependencies": {
     "netlify-cli": "^17.3.0",
