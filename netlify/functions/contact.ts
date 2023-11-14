@@ -10,6 +10,7 @@ const headers = {
 
 const handler: Handler = async (event) => {
   if (event.httpMethod == "OPTIONS") {
+    console.log("IF OPTIONS");
     return {
       statusCode: 200,
       headers: {
@@ -21,6 +22,7 @@ const handler: Handler = async (event) => {
   }
 
   try {
+    console.log(event.httpMethod);
     // 送信用アカウントの設定（ここではGmail）
     const transporter = nodemailer.createTransport({
       port: 465,
