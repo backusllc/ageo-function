@@ -19,6 +19,7 @@ const handler: Handler = async (event) => {
       if (!event.body) {
         return {
           statusCode: 403,
+          headers,
           body: JSON.stringify("body is required"),
         };
       }
@@ -96,11 +97,7 @@ const handler: Handler = async (event) => {
 
       return {
         statusCode: 200,
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Headers": "Content-Type",
-          "Access-Control-Allow-Methods": "GET, POST, OPTION",
-        },
+        headers,
         body: JSON.stringify({ hostInfo, guestInfo }),
       };
     } catch (error) {
