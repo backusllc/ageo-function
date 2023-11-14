@@ -1,0 +1,25 @@
+{
+  "name": "ageo-function",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "netlify dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/backusllc/ageo-function/issues"
+  },
+  "homepage": "https://github.com/backusllc/ageo-function#readme",
+  "dependencies": {
+    "@netlify/functions": "^2.4.0",
+    "netlify-lambda": "^2.0.16"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.3.0",
+    "typescript": "^5.2.2"
+  }
+}
