@@ -1,7 +1,25 @@
 import { Handler } from "@netlify/functions";
 import nodemailer from "nodemailer";
 
+const headers = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, POST, OPTION",
+  "Access-Control-Allow-Headers":
+    "Content-Type, Access-Control-Allow-Headers, X-Requested-With",
+};
+
 const handler: Handler = async (event) => {
+  if (event.httpMethod == "OPTIONS") {
+    return {
+      statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "GET, POST, OPTION",
+      },
+    };
+  }
+
   try {
     // 送信用アカウントの設定（ここではGmail）
     const transporter = nodemailer.createTransport({
