@@ -28,8 +28,8 @@ const handler: Handler = async (event) => {
         port: 465,
         host: "mail.red.shared-server.net",
         auth: {
-          user: "mail@ageokogyo.com",
-          pass: `C40kZhnK`,
+          user: "toiawase@ageokogyo.com",
+          pass: `7NsT5gi6`,
         },
         tls: {
           rejectUnauthorized: false,
