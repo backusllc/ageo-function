@@ -41,8 +41,8 @@ const handler: Handler = async (event) => {
 
       // 管理人に送るお問い合わせメッセージ通知メール
       const toHostMailData = {
-        from: "mail@ageokogyo.com",
-        to: "mail@ageokogyo.com",
+        from: "toiawase@ageokogyo.com",
+        to: "toiawase@ageokogyo.com",
         subject: `【お問い合わせ】${req.name}様より`,
         html: `
       <p>
@@ -66,7 +66,7 @@ const handler: Handler = async (event) => {
 
       // ゲストに送る自動受付メール
       const toGuestMailData = {
-        from: "mail@ageokogyo.com",
+        from: "toiawase@ageokogyo.com",
         to: req.email,
         subject: `【お問い合わせ自動受付メール】`,
         html: `
